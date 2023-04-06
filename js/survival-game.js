@@ -1,10 +1,14 @@
+import MainScene from "./MainScene.js";
+
 var config = {
     width: 512,
     height: 512,
-    backgroundColor: '#333333',
+    backgroundColor: '#999999',
     type: Phaser.AUTO,
     parent: 'survival-game',
-    scene: [],
+    scene: [
+        MainScene
+    ],
     scale: {
         zoom: 2,
     },
@@ -12,7 +16,7 @@ var config = {
         default: 'matter',
         matter: {
             debug: true,
-            grafity: {
+            gravity: {
                 y: 0,
             }
         }
