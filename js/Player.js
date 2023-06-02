@@ -4,6 +4,12 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         super(scene.matter.world, x, y, texture, frame);
         this.scene.add.existing(this);
 
+        // Weapon
+        this.spriteWeapon = new Phaser.GameObjects.Sprite(this.scene, 0, 0, 'items', 162);
+        this.spriteWeapon.setScale(0.8);
+        this.spriteWeapon.setOrigin(0.25, 0.75);
+        this.scene.add.existing(this.spriteWeapon)
+
         const { Body, Bodies } = Phaser.Physics.Matter.Matter;
         var playerCollider = Bodies.circle(
             this.x, 
@@ -35,11 +41,17 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
 
         this.setExistingBody(compoundBody);
         this.setFixedRotation(true);
+
+        this.scene.input.on('pointermove', pointer => this.setFlipX(pointer.worldX < this.x));
     }
 
     static preload(scene) {
         scene.load.atlas('main_char', 'assets/images/main_char.png', 'assets/images/main_char_atlas.json');
-        scene.load.animation('main_char_anim', 'assets/images/main_char_anim.json')
+        scene.load.animation('main_char_anim', 'assets/images/main_char_anim.json');
+        scene.load.spritesheet('items', 'assets/images/items.png', {
+            frameWidth: 32,
+            frameHeight: 32
+        });
     }
 
     get velocity() {
@@ -70,6 +82,29 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
             this.anims.play('main_char_walk', true)
         } else {
             this.anims.play('main_char_idle', true)
+        }
+
+        this.spriteWeapon.setPosition(this.x, this.y);
+        this.weaponRotate();
+    }
+
+    weaponRotate() {
+        let pointer = this.scene.input.activePointer;
+
+        if (pointer.isDown) {
+            this.weaponRotation += 6;
+        } else {
+            this.weaponRotation = 0;
+        }
+
+        if (this.weaponRotation > 100) {
+            this.weaponRotation = 0
+        }
+
+        if (this.flipX) {
+            this.spriteWeapon.setAngle(-this.weaponRotation - 90);
+        } else {
+            this.spriteWeapon.setAngle(this.weaponRotation);
         }
     }
 }
