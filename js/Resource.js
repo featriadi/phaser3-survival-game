@@ -5,6 +5,9 @@ export default class Resource extends Phaser.Physics.Matter.Sprite {
         this.scene.add.existing(this);
 
         let yOrigin = resource.properties.find(p=>p.name == 'yOrigin').value;
+        this.name = resource.type;
+        this.health = 5;
+        this.sound = this.scene.sound.add(this.name);
         this.x += this.width/2;
         this.y -= this.height/2;
         this.y = this.y + this.height * (yOrigin - 0.5);
@@ -31,5 +34,18 @@ export default class Resource extends Phaser.Physics.Matter.Sprite {
     
     static preload(scene) {
         scene.load.atlas('resources', 'assets/images/resources.png', 'assets/images/resources_atlas.json');
+        scene.load.audio('tree', 'assets/audio/tree.mp3');
+        scene.load.audio('rock', 'assets/audio/rock.wav');
+        scene.load.audio('bush', 'assets/audio/bush.wav');
+    }
+
+    get dead() {
+        return this.health <= 0;
+    }
+
+    hit = ()=> {
+        if(this.sound) this.sound.play();
+        this.health--;
+        console.log(`Hitting: ${this.name} Health: ${this.health}`);
     }
 }
