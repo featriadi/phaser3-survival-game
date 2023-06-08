@@ -43,6 +43,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.setExistingBody(compoundBody);
         this.setFixedRotation(true);
         this.CreateMiningCollisions(playerSensor);
+        this.CreatePickupCollisions(playerCollider);
         this.scene.input.on('pointermove', pointer => this.setFlipX(pointer.worldX < this.x));
     }
 
@@ -126,6 +127,24 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
             callback: other => {
                 this.touching = this.touching.filter(gameObject => gameObject != other.gameObjectB);
                 console.log(this.touching.length);
+            },
+            context: this.scene,
+        })
+    }
+
+    CreatePickupCollisions(playerCollider) {
+        this.scene.matterCollision.addOnCollideStart({
+            objectA: [playerCollider],
+            callback: other => {
+                if(other.gameObjectB && other.gameObjectB.pickup) other.gameObjectB.pickup();
+            },
+            context: this.scene,
+        });
+
+        this.scene.matterCollision.addOnCollideActive({
+            objectA: [playerCollider],
+            callback: other => {
+                if(other.gameObjectB && other.gameObjectB.pickup) other.gameObjectB.pickup();
             },
             context: this.scene,
         })

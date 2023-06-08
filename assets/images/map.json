@@ -43,6 +43,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -60,6 +65,11 @@
                  "id":11,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -79,6 +89,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -96,6 +111,11 @@
                  "id":13,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -115,6 +135,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -132,6 +157,11 @@
                  "id":15,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -151,6 +181,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -168,6 +203,11 @@
                  "id":17,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -187,6 +227,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -204,6 +249,11 @@
                  "id":19,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -223,6 +273,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -240,6 +295,11 @@
                  "id":21,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -259,6 +319,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -276,6 +341,11 @@
                  "id":23,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -295,6 +365,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -312,6 +387,11 @@
                  "id":25,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -332,6 +412,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -349,6 +434,11 @@
                  "id":29,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -368,6 +458,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -385,6 +480,11 @@
                  "id":31,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -404,6 +504,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -421,6 +526,11 @@
                  "id":33,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -440,6 +550,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -457,6 +572,11 @@
                  "id":36,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -476,6 +596,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -493,6 +618,11 @@
                  "id":38,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -512,6 +642,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -529,6 +664,11 @@
                  "id":40,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -548,6 +688,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -565,6 +710,11 @@
                  "id":42,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -584,6 +734,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -601,6 +756,11 @@
                  "id":44,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -621,6 +781,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -638,6 +803,11 @@
                  "id":46,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -657,6 +827,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -674,6 +849,11 @@
                  "id":48,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -693,6 +873,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -711,6 +896,11 @@
                  "name":"",
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -728,6 +918,11 @@
                  "id":51,
                  "name":"",
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
@@ -769,6 +964,11 @@
                  "id":20,
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[272,272]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.8
@@ -779,6 +979,11 @@
                  "id":21,
                  "properties":[
                         {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[228,228]"
+                        }, 
+                        {
                          "name":"yOrigin",
                          "type":"float",
                          "value":0.6
@@ -788,6 +993,11 @@
                 {
                  "id":22,
                  "properties":[
+                        {
+                         "name":"drops",
+                         "type":"string",
+                         "value":"[273,273]"
+                        }, 
                         {
                          "name":"yOrigin",
                          "type":"float",
