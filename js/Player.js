@@ -1,9 +1,15 @@
-export default class Player extends Phaser.Physics.Matter.Sprite {
+import MatterEntity from "./MatterEntity.js";
+
+export default class Player extends MatterEntity {
     constructor(data) {
         let {scene, x, y, texture, frame} = data;
-        super(scene.matter.world, x, y, texture, frame);
+        super({
+            ...data,
+            name: 'player',
+            health: 2,
+            drops: [],
+        });
         this.touching = [];
-        this.scene.add.existing(this);
 
         // Weapon
         this.spriteWeapon = new Phaser.GameObjects.Sprite(this.scene, 0, 0, 'items', 162);
@@ -54,10 +60,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
             frameWidth: 32,
             frameHeight: 32
         });
-    }
-
-    get velocity() {
-        return this.body.velocity;
+        scene.load.audio('player', 'assets/audio/player.wav');
     }
 
     update() {

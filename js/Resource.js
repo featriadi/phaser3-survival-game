@@ -1,22 +1,27 @@
-import DropItem from "./DropItem.js";
+import MatterEntity from "./MatterEntity.js";
 
-export default class Resource extends Phaser.Physics.Matter.Sprite {
+export default class Resource extends MatterEntity {
     constructor(data) {
         let {scene, resource} = data;
-        super(scene.matter.world, resource.x, resource.y, 'resources', resource.type);
-        this.scene.add.existing(this);
+        let drops = JSON.parse(resource.properties.find(p => p.name == 'drops').value);
+        let depth = resource.properties.find(p => p.name == 'depth').value;
+        
+        super({
+            name: resource.type,
+            scene,
+            x: resource.x,
+            y: resource.y,
+            health: 5,
+            drops,
+            texture: 'resources',
+            frame: resource.type,
+            depth,
+        })
 
         let yOrigin = resource.properties.find(p=>p.name == 'yOrigin').value;
-        this.drops = JSON.parse(resource.properties.find(p => p.name == 'drops').value);
-        this.name = resource.type;
-        this.health = 5;
-        this.sound = this.scene.sound.add(this.name);
-        this.x += this.width/2;
-        this.y -= this.height/2;
         this.y = this.y + this.height * (yOrigin - 0.5);
 
         const {
-            Body,
             Bodies
         } = Phaser.Physics.Matter.Matter;
         
@@ -41,24 +46,5 @@ export default class Resource extends Phaser.Physics.Matter.Sprite {
         scene.load.audio('rock', 'assets/audio/rock.wav');
         scene.load.audio('bush', 'assets/audio/bush.wav');
         scene.load.audio('pickup', 'assets/audio/pickup.ogg');
-    }
-
-    get dead() {
-        return this.health <= 0;
-    }
-
-    hit = ()=> {
-        if(this.sound) this.sound.play();
-        this.health--;
-        console.log(`Hitting: ${this.name} Health: ${this.health}`);
-
-        if (this.dead) {
-            this.drops.forEach(drop => new DropItem({
-                scene: this.scene,
-                x: this.x,
-                y: this.y,
-                frame: drop
-            }));
-        }
     }
 }
