@@ -41,7 +41,7 @@ export default class Resource extends MatterEntity {
     }
     
     static preload(scene) {
-        scene.load.atlas('resources', 'assets/images/resources.png', 'assets/images/resources_atlas.json');
+        scene.load.atlas('resources', 'assets/images/resources/resources.png', 'assets/images/resources/resources_atlas.json');
         scene.load.audio('tree', 'assets/audio/tree.mp3');
         scene.load.audio('rock', 'assets/audio/rock.wav');
         scene.load.audio('bush', 'assets/audio/bush.wav');

@@ -54,8 +54,8 @@ export default class Player extends MatterEntity {
     }
 
     static preload(scene) {
-        scene.load.atlas('main_char', 'assets/images/main_char.png', 'assets/images/main_char_atlas.json');
-        scene.load.animation('main_char_anim', 'assets/images/main_char_anim.json');
+        scene.load.atlas('main_char', 'assets/images/main_char/main_char.png', 'assets/images/main_char/main_char_atlas.json');
+        scene.load.animation('main_char_anim', 'assets/images/main_char/main_char_anim.json');
         scene.load.spritesheet('items', 'assets/images/items.png', {
             frameWidth: 32,
             frameHeight: 32
