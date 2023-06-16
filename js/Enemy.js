@@ -24,9 +24,81 @@ export default class Enemy extends MatterEntity {
             texture: 'enemies',
             frame: `${enemy.name}_idle_1`,   
         });
+
+        const { Body, Bodies } = Phaser.Physics.Matter.Matter;
+        var enemyCollider = Bodies.circle(
+            this.x, 
+            this.y, 
+            12, 
+            { 
+                isSensor: false,
+                label: 'enemyCollider'
+            }
+        );
+
+        var enemySensor = Bodies.circle(
+            this.x, 
+            this.y, 
+            80, 
+            { 
+                isSensor: true,
+                label: 'enemySensor'
+            }
+        );
+
+        const compoundBody = Body.create({
+            parts: [
+                enemyCollider,
+                enemySensor
+            ],
+            frictionAir: 0.35,
+        });
+
+        this.setExistingBody(compoundBody);
+        this.setFixedRotation(true);
+        this.scene.matterCollision.addOnCollideStart({
+            objectA: [enemySensor],
+            callback: other => {
+                if(other.gameObjectB && other.gameObjectB.name == 'player') this.attacking = other.gameObjectB
+            },
+            context: this.scene,
+        })
     }
 
     update() {
-        // console.log('enemy update');
+        if(this.dead) return;
+
+        if(this.attacking) {
+            let direction = this.attacking.position.subtract(this.position);
+            if(direction.length() > 24) {
+                let v = direction.normalize();
+                this.setVelocityX(direction.x);
+                this.setVelocityY(direction.y);
+                if(this.attackTimer){
+                    clearInterval(this.attackTimer);
+                    this.attackTimer = null;
+                }
+            } else {
+                if(this.attackTimer == null) {
+                    this.attackTimer = setInterval(this.attack, 500, this.attacking);
+                } 
+            }
+        }
+        
+        this.setFlipX(this.velocity.x < 0);
+
+        if(Math.abs(this.velocity.x) > 0.1 || Math.abs(this.velocity.y) > 0.1){
+            this.anims.play(`${this.name}_walk`, true)
+        } else {
+            this.anims.play(`${this.name}_idle`, true)
+        }
+    }
+
+    attack = (target) => {
+        if(target.dead || this.dead) {
+            clearInterval(this.attackTimer);
+            return;
+        }
+        target.hit();
     }
 }
